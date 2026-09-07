@@ -9,15 +9,15 @@ const MainProvider = dynamic(() => import("./MainProvider"));
 const primaryFont = Inter({ variable: "--rs-primary-font", subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Dental Clinic Management App",
-  description: "A Dental Clinic Management Application",
+  title: "Event Management App",
+  description: "A Event Management Application",
 };
 
 export default function RootLayout({ children }: React.PropsWithChildren) {
   return (
     <html lang="en">
       <head>
-        <meta name="apple-mobile-web-app-title" content="Dental Clinic Management App" />
+        <meta name="apple-mobile-web-app-title" content="Event Management App" />
       </head>
       <body className={`${primaryFont.variable}`}>
         <MainProvider>{children}</MainProvider>

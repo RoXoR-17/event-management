@@ -93,7 +93,7 @@ const NavHeader = ({ onCreateAppointment, children }: NavLayoutCompProps) => {
       <Link href="/">
         <Image src="/logo.png" alt={""} width={40} height={40} />
         <Typography.Title level={4} ellipsis>
-          Kabibai Dental Clinic
+          Purple Party Planner
         </Typography.Title>
       </Link>
       <Divider type="vertical" className={styles.divider} />
@@ -126,11 +126,11 @@ const NavSidebar = ({ onCreateAppointment, children }: NavLayoutCompProps) => {
 
   return (
     <Sider theme="dark" className={styles.sidebar} collapsible width={220} collapsedWidth={60}>
-      <Tooltip title="Kabibai Dental Clinic" placement="right">
+      <Tooltip title="Purple Party Planner" placement="right">
         <Link href="/">
           <Image src="/logo.png" alt="Logo" width={40} height={40} />
           <Typography.Title level={4} ellipsis>
-            Kabibai Dental Clinic
+            Purple Party Planner
           </Typography.Title>
         </Link>
       </Tooltip>

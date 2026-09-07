@@ -54,5 +54,5 @@ self.addEventListener("push", function (event) {
 self.addEventListener("notificationclick", function (event) {
   console.info("Notification click received");
   event.notification.close();
-  event.waitUntil(clients.openWindow("https://dental-clinic-management-theta.vercel.app/home"));
+  event.waitUntil(clients.openWindow("https://event-management-ecru-nu.vercel.app/home"));
 });

@@ -2,9 +2,9 @@ import type { MetadataRoute } from "next";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "Dental Clinic Management Application",
-    short_name: "Dental Clinic Management App",
-    description: "A Dental Clinic Management Application",
+    name: "Event Management Application",
+    short_name: "Event Management App",
+    description: "A Event Management Application",
     start_url: "/",
     display: "standalone",
     background_color: "#ffffff",
