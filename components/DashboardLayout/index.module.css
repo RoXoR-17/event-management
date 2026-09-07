@@ -1,0 +1,256 @@
+.wrapper {
+  /* background-color: color-mix(
+    in srgb,
+    var(--rs-color-primary) 5%,
+    var(--rs-color-link-hover) 15%
+  ); */
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  height: 100svh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: 1.5vmin;
+  overflow: hidden;
+}
+
+.sidebar {
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+  overflow: hidden;
+}
+
+.sidebar div[class*="ant-layout-sider-children"] {
+  overflow-y: auto;
+}
+
+.header a,
+.sidebar a {
+  display: flex;
+  align-items: center;
+  gap: 1vmin;
+}
+
+.sidebar a {
+  position: sticky;
+  top: 0;
+  background-color: var(--rs-layout-sider-bg);
+  z-index: 1;
+  padding-bottom: 2.5vmin !important;
+  margin-bottom: 2vmin;
+  pointer-events: none;
+}
+
+.sidebar[class*="ant-layout-sider-collapsed"] a {
+  pointer-events: all;
+}
+
+.sidebar a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 1vmin;
+  right: 1vmin;
+  height: 2px;
+  background-color: var(--rs-color-white);
+  border-radius: 2px;
+  opacity: 0.75;
+}
+
+.header h4,
+.sidebar h4 {
+  margin-bottom: 0;
+  color: var(--rs-color-white);
+}
+
+.header img {
+  height: 6vmin;
+  width: 6vmin;
+  object-fit: contain;
+}
+
+.header .divider {
+  height: 30%;
+  border-inline-start: 2px solid var(--rs-color-white);
+  border-radius: 2px;
+  opacity: 0.75;
+  margin-top: 2px;
+}
+
+.header_menu {
+  line-height: 40px;
+  margin-right: auto;
+}
+
+.header_actions {
+  display: flex;
+  align-items: center;
+  gap: 1.5vmin;
+}
+
+.color_box {
+  width: 3.5vmin;
+  height: 3.5vmin;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.color_box.active {
+  box-shadow: 0 0 0 2px var(--rs-color-text-base);
+}
+
+.sidebar[class*="ant-layout-sider-collapsed"] a {
+  justify-content: center;
+}
+
+.sidebar[class*="ant-layout-sider-collapsed"] h4 {
+  display: none;
+}
+
+.sidebar[class*="ant-layout-sider-collapsed"] img {
+  height: 6vmin;
+  width: 6vmin;
+}
+
+.sidebar a {
+  flex-wrap: nowrap;
+  overflow: hidden;
+  padding: 1.5vmin;
+}
+
+.sidebar h4 {
+  font-size: 15px;
+  white-space: nowrap;
+  padding-top: 1px;
+}
+
+.sidebar img {
+  height: 4vmin;
+  width: 4vmin;
+  object-fit: contain;
+}
+
+.sidebar .divider {
+  border-block-start: 2px solid var(--rs-color-white);
+  border-radius: 2px;
+  opacity: 0.75;
+  margin: 0.5vmin auto 2vmin;
+  min-width: 96%;
+  width: 96%;
+}
+
+.sidebar h5 {
+  color: var(--rs-color-white);
+  font-size: 10px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin: 1vmin 0 1vmin 2vmin;
+  pointer-events: none;
+}
+
+.sidebar[class*="ant-layout-sider-collapsed"] h5 {
+  font-size: 14px;
+  text-align: center;
+  margin: 1vmin 0;
+  pointer-events: all;
+}
+
+.sidebar[class*="ant-layout-sider-collapsed"] h5 i {
+  display: none;
+}
+
+.sidebar_menu {
+  margin-bottom: 2vmin;
+}
+
+.container {
+  position: relative;
+  flex-grow: 1;
+  padding: 2vmin;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.container > div:first-child {
+  transition: opacity 0.3s ease;
+}
+
+.loading > div:first-child {
+  opacity: 0.7;
+  pointer-events: none;
+  user-select: none;
+}
+
+.loader {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+
+.loading .loader {
+  display: block;
+}
+
+@media screen and (max-width: 1080px) {
+  .header {
+    padding: 0 2.5vmin;
+    gap: 2.5vmin;
+  }
+
+  .header h4 {
+    font-size: 1.2rem;
+  }
+
+  .header_menu {
+    line-height: 34px;
+  }
+
+  .header_menu li[class*="ant-menu-item"] {
+    padding-inline: 1.5vmin;
+  }
+
+  .header_menu li span[class*="ant-menu-title-content"] {
+    margin-inline-start: 0.8vmin !important;
+  }
+
+  .header button[class*="ant-btn-color-link"],
+  .header div[class*="ant-divider"] {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 708px) {
+  .header h4 {
+    font-size: 0.8rem;
+  }
+
+  .header img {
+    min-height: 24px;
+    height: 3.5vmin;
+    min-width: 24px;
+    width: 3.5vmin;
+  }
+
+  .header_menu,
+  .sidebar_menu,
+  .sidebar h5,
+  .sidebar div[class*="ant-layout-sider-trigger"] {
+    display: none;
+  }
+
+  .header_actions {
+    margin-left: auto;
+  }
+}

@@ -1,0 +1,70 @@
+.card_header {
+  padding: 2.5vmin 1.5vmin;
+}
+
+.card_header .card_title {
+  line-height: 1;
+  margin-bottom: 0;
+}
+
+.search_input {
+  margin-left: auto;
+  max-width: min(350px, 100%);
+}
+
+.table_container {
+  margin-top: -1px;
+  flex-grow: 1;
+}
+
+.table_container div[class*="ant-table-wrapper"],
+.table_container div[class*="ant-spin-"] {
+  height: 100%;
+}
+
+.table_container div[class*="ant-table "] {
+  height: calc(100% - 4.5vmin - 24px);
+}
+
+.table th,
+.table td[class*="ant-table-cell"] {
+  padding: 1.5vmin 3vmin !important;
+}
+
+.table th {
+  border-top: 1px solid var(--rs-color-border-secondary);
+}
+
+.table th::before {
+  display: none;
+}
+
+.table th:not(:last-child),
+.table td:not(:last-child) {
+  border-right: 1px solid var(--rs-color-border-secondary);
+}
+
+.table_actions_cell {
+  display: inline-flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 1vmin;
+}
+
+.table div[class*="ant-table-expanded-row-fixed"] {
+  width: 100% !important;
+}
+
+.table tr[class*="ant-table-placeholder"] td {
+  border-bottom: none;
+}
+
+.table ul[class*="ant-pagination"] {
+  position: sticky;
+  bottom: 0;
+  margin: 0 !important;
+  padding: 2.25vmin 3vmin;
+  margin-top: -1px !important;
+  border-top: 1px solid var(--rs-color-border-secondary);
+  background-color: var(--rs-color-white);
+}

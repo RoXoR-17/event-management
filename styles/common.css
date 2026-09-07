@@ -1,0 +1,10 @@
+.ant-notification-notice-message {
+  margin-bottom: 0 !important;
+}
+
+.ant-picker-dropdown
+  .ant-picker-time-panel-column
+  > li.ant-picker-time-panel-cell-selected
+  .ant-picker-time-panel-cell-inner:not(:hover) {
+  color: #fff;
+}

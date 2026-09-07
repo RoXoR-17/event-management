@@ -1,0 +1,27 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+  position: relative;
+  z-index: 1;
+  padding: 3vmin;
+  overflow: hidden;
+}
+
+.container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(circle, var(--rs-color-border) 25%, var(--rs-color-link) 100%);
+  z-index: -1;
+  opacity: 0.65;
+}
+
+@media screen and (max-width: 708px) {
+  .container::before {
+    background: radial-gradient(circle, var(--rs-color-border) 45%, var(--rs-color-link) 100%);
+  }
+}

@@ -1,0 +1,18 @@
+.ant-btn-color-link {
+  color: var(--rs-color-link);
+}
+
+.ant-btn-color-link.ant-btn-variant-solid {
+  color: var(--rs-button-primary-color);
+  background-color: var(--rs-color-link);
+}
+
+.ant-btn-color-link.ant-btn-variant-solid:not(:disabled):not(.ant-btn-disabled):hover {
+  color: var(--rs-button-primary-color);
+  background-color: var(--rs-color-link-hover);
+}
+
+.ant-btn-color-link.ant-btn-variant-solid:not(:disabled):not(.ant-btn-disabled):active {
+  color: var(--rs-button-primary-color);
+  background-color: var(--rs-color-link-active);
+}
