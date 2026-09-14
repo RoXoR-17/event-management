@@ -3,7 +3,6 @@ import {
   CompassFilled,
   HomeOutlined,
   LogoutOutlined,
-  PlusCircleOutlined,
   SettingOutlined,
   ThunderboltFilled,
   UserOutlined,
@@ -98,9 +97,9 @@ const NavHeader = ({ onCreateAppointment, children }: NavLayoutCompProps) => {
       </Link>
       <Divider type="vertical" className={styles.divider} />
       <div className={styles.header_menu}>{children}</div>
-      <Button color="link" variant="solid" onClick={onCreateAppointment}>
+      {/* <Button color="link" variant="solid" onClick={onCreateAppointment}>
         Create Appointment
-      </Button>
+      </Button> */}
       <Divider type="vertical" className={styles.divider} />
       <div className={styles.header_actions}>
         <Button shape="circle" icon={<BellOutlined />} type="primary" danger />
@@ -151,12 +150,12 @@ const NavSidebar = ({ onCreateAppointment, children }: NavLayoutCompProps) => {
         theme="dark"
         selectedKeys={[]}
         items={[
-          {
-            key: "create-appointment",
-            label: "Create Appointment",
-            icon: <PlusCircleOutlined />,
-            onClick: onCreateAppointment,
-          },
+          // {
+          //   key: "create-appointment",
+          //   label: "Create Appointment",
+          //   icon: <PlusCircleOutlined />,
+          //   onClick: onCreateAppointment,
+          // },
           {
             key: "logout",
             label: "Logout",
